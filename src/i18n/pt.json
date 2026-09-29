@@ -63,7 +63,28 @@
     "intro": "Tem uma vaga ou quer conversar sobre um projeto? Me mande uma mensagem.",
     "email": "E-mail",
     "linkedin": "LinkedIn",
-    "github": "GitHub"
+    "github": "GitHub",
+    "form": {
+      "name": "Nome",
+      "email": "E-mail",
+      "message": "Mensagem",
+      "submit": "Enviar mensagem",
+      "sending": "Enviando…",
+      "success": "Mensagem enviada! Respondo em breve.",
+      "fixErrors": "Corrija os campos destacados e tente de novo.",
+      "errors": {
+        "name.min": "Informe seu nome (mínimo de 2 caracteres).",
+        "name.max": "O nome pode ter no máximo 100 caracteres.",
+        "email.invalid": "Informe um e-mail válido, como nome@exemplo.com.",
+        "message.min": "Escreva uma mensagem com pelo menos 10 caracteres.",
+        "message.max": "A mensagem pode ter no máximo 2000 caracteres."
+      },
+      "server": {
+        "rate_limited": "Muitas mensagens em pouco tempo. Tente de novo em alguns minutos.",
+        "not_configured": "O envio está indisponível no momento. Escreva direto para lp.prates7@gmail.com.",
+        "generic": "Não foi possível enviar agora. Tente de novo ou escreva para lp.prates7@gmail.com."
+      }
+    }
   },
   "footer": {
     "rights": "Feito com Next.js e TypeScript."
