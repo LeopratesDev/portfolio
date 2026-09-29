@@ -54,9 +54,11 @@ describe("Home (en)", () => {
     for (const name of ["About", "Projects", "Skills", "Experience & education", "Contact"]) {
       expect(screen.getByRole("region", { name })).toBeInTheDocument();
     }
-    expect(screen.getByText("REST endpoints")).toBeInTheDocument();
+    // Os dois projetos (RH Manager e HelpDesk API) mostram "endpoints REST" traduzido
+    expect(screen.getAllByText("REST endpoints")).toHaveLength(2);
     expect(screen.getByRole("heading", { name: "Technical Support" })).toBeInTheDocument();
     expect(screen.getByRole("img", { name: /RH Manager dashboard/ })).toBeInTheDocument();
+    expect(screen.getByRole("img", { name: /HelpDesk API Swagger/ })).toBeInTheDocument();
     expect(screen.getByRole("button", { name: "Send message" })).toBeInTheDocument();
     // Nenhum texto em português escapou para a versão em inglês.
     expect(screen.queryByText(/Ver projetos|Habilidades|Enviar mensagem/)).toBeNull();
