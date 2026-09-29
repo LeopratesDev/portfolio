@@ -12,7 +12,7 @@ describe("Home", () => {
 
   it("cada seção é uma região nomeada pelo seu título", () => {
     render(<Home />);
-    for (const name of ["Sobre", "Habilidades", "Experiência e formação", "Contato"]) {
+    for (const name of ["Sobre", "Projetos", "Habilidades", "Experiência e formação", "Contato"]) {
       expect(screen.getByRole("region", { name })).toBeInTheDocument();
     }
   });
@@ -39,6 +39,6 @@ describe("Home", () => {
     const linkedin = screen.getByRole("link", { name: /LinkedIn/ });
     expect(linkedin).toHaveAttribute("target", "_blank");
     expect(linkedin).toHaveAttribute("rel", "noopener noreferrer");
-    expect(linkedin).toHaveAccessibleName(/abre em nova aba/);
+    expect(linkedin).toHaveAccessibleName("LinkedIn in/leonardo-prates77 (abre em nova aba)");
   });
 });
