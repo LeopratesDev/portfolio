@@ -1,3 +1,4 @@
+import { ContactForm } from "@/components/contact/ContactForm";
 import { profile } from "@/data/profile";
 import type pt from "@/i18n/pt.json";
 import { Section } from "./Section";
@@ -19,7 +20,9 @@ export function Contact({ t, newTabLabel }: Props) {
   return (
     <Section id="contato" title={t.title}>
       <p className="max-w-2xl text-lg text-muted">{t.intro}</p>
-      {/* O formulário entra aqui na etapa 5. */}
+      <div className="mt-8">
+        <ContactForm labels={t.form} />
+      </div>
       <ul className="mt-8 grid gap-3 sm:grid-cols-3">
         {links.map((link) => (
           <li key={link.href}>
