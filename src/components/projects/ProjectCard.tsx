@@ -22,7 +22,7 @@ export function ProjectCard({ project, locale, labels }: Props) {
   const { title, description, image, tech, stats, links, status } = project;
 
   return (
-    <article className="flex w-full flex-col overflow-hidden rounded-lg border border-border">
+    <article className="flex w-full flex-col overflow-hidden rounded-lg border border-border bg-surface transition-colors hover:border-accent/60">
       {image ? (
         <Image
           src={image.src}
@@ -37,7 +37,7 @@ export function ProjectCard({ project, locale, labels }: Props) {
         <div
           role="img"
           aria-label={labels.imagePlaceholder}
-          className="flex aspect-[1280/760] items-center justify-center border-b border-border bg-surface font-mono text-muted"
+          className="flex aspect-[1280/760] items-center justify-center border-b border-border bg-surface-2 font-mono text-muted"
         >
           {"{ }"}
         </div>
@@ -45,7 +45,7 @@ export function ProjectCard({ project, locale, labels }: Props) {
 
       <div className="flex flex-1 flex-col p-5">
         <div className="flex items-center gap-3">
-          <h3 className="text-xl font-semibold">{title}</h3>
+          <h3 className="font-display text-2xl font-bold tracking-wide uppercase">{title}</h3>
           {status === "in-progress" && (
             <span className="rounded-full border border-border px-2.5 py-0.5 text-xs text-muted">
               {labels.inProgress}
@@ -68,7 +68,7 @@ export function ProjectCard({ project, locale, labels }: Props) {
         {tech.length > 0 && (
           <ul className="mt-4 flex flex-wrap gap-2" aria-label={labels.techList}>
             {tech.map((item) => (
-              <li key={item} className="rounded-md bg-surface px-2.5 py-1 font-mono text-xs">
+              <li key={item} className="rounded-md bg-surface-2 px-2.5 py-1 font-mono text-xs">
                 {item}
               </li>
             ))}

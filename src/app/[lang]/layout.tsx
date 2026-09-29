@@ -1,5 +1,5 @@
 import type { Metadata, Viewport } from "next";
-import { Geist, Geist_Mono } from "next/font/google";
+import { Geist, Geist_Mono, Oswald } from "next/font/google";
 import { notFound } from "next/navigation";
 import { Footer } from "@/components/layout/Footer";
 import { Header, type NavItem } from "@/components/layout/Header";
@@ -14,11 +14,17 @@ import "../globals.css";
 
 // next/font baixa a fonte no build e serve do próprio domínio (sem request ao Google em runtime).
 const geistSans = Geist({ variable: "--font-geist-sans", subsets: ["latin"], display: "swap" });
+// Mono só aparece no cartão de código (abaixo da 1ª tela no celular): sem preload,
+// para não competir com as fontes do título, que definem o LCP.
 const geistMono = Geist_Mono({
   variable: "--font-geist-mono",
   subsets: ["latin"],
   display: "swap",
+  preload: false,
 });
+// Oswald: fonte condensada dos títulos e do menu (a "voz" visual do site).
+// Sem `weight`: carrega a versão variável, um único arquivo para todos os pesos.
+const oswald = Oswald({ variable: "--font-oswald", subsets: ["latin"], display: "swap" });
 
 /** Gera /pt e /en no build (SSG). Qualquer outro idioma na URL vira 404. */
 export function generateStaticParams() {
@@ -56,10 +62,7 @@ export async function generateMetadata({ params }: LayoutProps<"/[lang]">): Prom
 }
 
 export const viewport: Viewport = {
-  themeColor: [
-    { media: "(prefers-color-scheme: light)", color: "#ffffff" },
-    { media: "(prefers-color-scheme: dark)", color: "#0b0f19" },
-  ],
+  themeColor: "#0c1310",
 };
 
 export default async function RootLayout({ children, params }: LayoutProps<"/[lang]">) {
@@ -80,7 +83,7 @@ export default async function RootLayout({ children, params }: LayoutProps<"/[la
     // suppressHydrationWarning: o script abaixo pode adicionar data-theme antes da hidratação.
     <html
       lang={htmlLang[lang]}
-      className={`${geistSans.variable} ${geistMono.variable}`}
+      className={`${geistSans.variable} ${geistMono.variable} ${oswald.variable}`}
       suppressHydrationWarning
     >
       <head>
@@ -88,7 +91,14 @@ export default async function RootLayout({ children, params }: LayoutProps<"/[la
       </head>
       <body className="flex min-h-dvh flex-col font-sans antialiased">
         <SkipLink label={t.a11y.skipLink} />
-        <Header nav={nav} navLabel={t.a11y.mainNav} themeLabel={t.a11y.themeToggle} />
+        <Header
+          nav={nav}
+          navLabel={t.a11y.mainNav}
+          themeLabel={t.a11y.themeToggle}
+          contactLabel={t.hero.ctaContact}
+          socialLabel={t.a11y.social}
+          newTabLabel={t.a11y.newTab}
+        />
         <main id="conteudo" tabIndex={-1} className="flex-1 focus:outline-none">
           {children}
         </main>

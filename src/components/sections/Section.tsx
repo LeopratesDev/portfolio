@@ -12,11 +12,16 @@ export function Section({ id, title, children }: Props) {
   const headingId = `${id}-titulo`;
   return (
     <section id={id} aria-labelledby={headingId} className="border-t border-border">
-      <div className="mx-auto max-w-5xl px-4 py-16 sm:px-6 sm:py-20">
-        <h2 id={headingId} className="text-2xl font-bold tracking-tight sm:text-3xl">
+      <div className="mx-auto max-w-6xl px-4 py-16 sm:px-6 sm:py-24">
+        {/* Traço verde curto antes do título: marca de seção, sem texto extra. */}
+        <span aria-hidden="true" className="block h-1 w-12 rounded-full bg-accent" />
+        <h2
+          id={headingId}
+          className="mt-4 font-display text-4xl font-bold tracking-tight uppercase sm:text-5xl"
+        >
           {title}
         </h2>
-        <div className="mt-8">{children}</div>
+        <div className="mt-10">{children}</div>
       </div>
     </section>
   );

@@ -63,13 +63,18 @@ test.describe("página inicial", () => {
     await expect(page.locator("main")).toBeFocused();
   });
 
-  for (const path of ["/pt", "/en"]) {
-    test(`sem violações de acessibilidade (axe, WCAG 2.2 AA) em ${path}`, async ({ page }) => {
-      await page.goto(path);
-      const results = await new AxeBuilder({ page })
-        .withTags(["wcag2a", "wcag2aa", "wcag21a", "wcag21aa", "wcag22aa"])
-        .analyze();
-      expect(results.violations).toEqual([]);
-    });
-  }
+  // Os dois temas: um verde que passa no escuro pode falhar no claro (já aconteceu).
+  for (const path of ["/pt", "/en"])
+    for (const theme of ["dark", "light"]) {
+      test(`sem violações de acessibilidade (axe, WCAG 2.2 AA) em ${path}, tema ${theme}`, async ({
+        page,
+      }) => {
+        await page.addInitScript((t) => localStorage.setItem("theme", t), theme);
+        await page.goto(path);
+        const results = await new AxeBuilder({ page })
+          .withTags(["wcag2a", "wcag2aa", "wcag21a", "wcag21aa", "wcag22aa"])
+          .analyze();
+        expect(results.violations).toEqual([]);
+      });
+    }
 });

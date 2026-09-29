@@ -19,7 +19,9 @@ export function Experience({ t, locale }: Props) {
             <p className="font-mono text-sm text-muted">
               {entry.period} · {t.kinds[entry.kind]}
             </p>
-            <h3 className="mt-1 text-lg font-semibold">{entry.title[locale]}</h3>
+            <h3 className="mt-1 font-display text-xl font-medium tracking-wide uppercase">
+              {entry.title[locale]}
+            </h3>
             <p className="text-accent">{entry.org}</p>
             <p className="mt-2 max-w-2xl text-muted">{entry.description[locale]}</p>
           </li>

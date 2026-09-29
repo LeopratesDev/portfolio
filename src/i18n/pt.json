@@ -7,7 +7,8 @@
     "skipLink": "Pular para o conteúdo",
     "mainNav": "Navegação principal",
     "themeToggle": "Alternar tema claro/escuro",
-    "newTab": "(abre em nova aba)"
+    "newTab": "(abre em nova aba)",
+    "social": "Redes sociais"
   },
   "nav": {
     "about": "Sobre",
@@ -21,7 +22,10 @@
     "role": "Desenvolvedor Full Stack Júnior",
     "ctaProjects": "Ver projetos",
     "ctaResume": "Baixar currículo (PDF)",
-    "ctaContact": "Falar comigo"
+    "ctaContact": "Falar comigo",
+    "codeCaption": "Trecho real do projeto RH Manager: endpoint que aprova férias",
+    "codeRepo": "Ver no GitHub: rh-manager",
+    "codeOmitted": "// … 1 linha omitida"
   },
   "about": {
     "title": "Sobre",
