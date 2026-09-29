@@ -8,6 +8,7 @@ import { SkipLink } from "@/components/layout/SkipLink";
 import { profile } from "@/data/profile";
 import { htmlLang, isLocale, locales } from "@/i18n/config";
 import { getDictionary } from "@/i18n/dictionaries";
+import { siteUrl } from "@/lib/site";
 import { themeInitScript } from "@/lib/theme";
 import "../globals.css";
 
@@ -30,12 +31,27 @@ export async function generateMetadata({ params }: LayoutProps<"/[lang]">): Prom
   if (!isLocale(lang)) return {};
   const t = getDictionary(lang);
   return {
+    // Base para transformar caminhos relativos (/pt, imagem OG) em URLs absolutas.
+    metadataBase: new URL(siteUrl()),
     title: t.meta.title,
     description: t.meta.description,
-    // hreflang: diz ao Google que /pt e /en são a mesma página em idiomas diferentes.
+    authors: [{ name: profile.name, url: profile.github }],
     alternates: {
+      canonical: `/${lang}`,
+      // hreflang: diz ao Google que /pt e /en são a mesma página em idiomas diferentes.
       languages: { "pt-BR": "/pt", en: "/en", "x-default": "/pt" },
     },
+    // A imagem vem do arquivo opengraph-image.tsx desta pasta (o Next injeta sozinho).
+    openGraph: {
+      type: "profile",
+      url: `/${lang}`,
+      siteName: profile.name,
+      title: t.meta.title,
+      description: t.meta.description,
+      locale: lang === "pt" ? "pt_BR" : "en_US",
+      alternateLocale: lang === "pt" ? "en_US" : "pt_BR",
+    },
+    twitter: { card: "summary_large_image", title: t.meta.title, description: t.meta.description },
   };
 }
 

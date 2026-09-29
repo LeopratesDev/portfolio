@@ -7,6 +7,8 @@ import { Projects } from "@/components/sections/Projects";
 import { Skills } from "@/components/sections/Skills";
 import { isLocale } from "@/i18n/config";
 import { getDictionary } from "@/i18n/dictionaries";
+import { personJsonLd, serializeJsonLd } from "@/lib/jsonLd";
+import { siteUrl } from "@/lib/site";
 
 // Server Component: /pt e /en viram HTML estático no build.
 export default async function Home({ params }: PageProps<"/[lang]">) {
@@ -16,6 +18,10 @@ export default async function Home({ params }: PageProps<"/[lang]">) {
 
   return (
     <>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: serializeJsonLd(personJsonLd(lang, siteUrl())) }}
+      />
       <Hero t={t.hero} />
       <About t={t.about} />
       <Projects t={t.projects} locale={lang} newTabLabel={t.a11y.newTab} />
