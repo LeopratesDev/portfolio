@@ -32,6 +32,16 @@
       "Busco uma vaga de desenvolvedor júnior em São Paulo ou remota."
     ]
   },
+  "projects": {
+    "title": "Projetos",
+    "card": {
+      "code": "Código",
+      "demo": "Demo",
+      "inProgress": "Em desenvolvimento",
+      "imagePlaceholder": "Imagem do projeto ainda não disponível",
+      "techList": "Tecnologias"
+    }
+  },
   "skills": {
     "title": "Habilidades",
     "groups": {
