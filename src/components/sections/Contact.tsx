@@ -28,9 +28,15 @@ export function Contact({ t, newTabLabel }: Props) {
               {...(link.external && { target: "_blank", rel: "noopener noreferrer" })}
               className="block rounded-lg border border-border p-4 hover:bg-surface"
             >
-              <span className="block font-semibold">{link.label}</span>
+              {/* Espaços explícitos entre os spans: sem eles o nome acessível sai colado. */}
+              <span className="block font-semibold">{link.label}</span>{" "}
               <span className="block truncate font-mono text-sm text-muted">{link.text}</span>
-              {link.external && <span className="sr-only"> {newTabLabel}</span>}
+              {link.external && (
+                <>
+                  {" "}
+                  <span className="sr-only">{newTabLabel}</span>
+                </>
+              )}
             </a>
           </li>
         ))}
