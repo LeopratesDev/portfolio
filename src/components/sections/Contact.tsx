@@ -1,9 +1,9 @@
 import { ContactForm } from "@/components/contact/ContactForm";
 import { profile } from "@/data/profile";
-import type pt from "@/i18n/pt.json";
+import type { Dictionary } from "@/i18n/dictionaries";
 import { Section } from "./Section";
 
-type Props = { t: (typeof pt)["contact"]; newTabLabel: string };
+type Props = { t: Dictionary["contact"]; newTabLabel: string };
 
 export function Contact({ t, newTabLabel }: Props) {
   const links = [

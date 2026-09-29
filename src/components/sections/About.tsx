@@ -1,7 +1,7 @@
-import type pt from "@/i18n/pt.json";
+import type { Dictionary } from "@/i18n/dictionaries";
 import { Section } from "./Section";
 
-type Props = { t: (typeof pt)["about"] };
+type Props = { t: Dictionary["about"] };
 
 export function About({ t }: Props) {
   return (

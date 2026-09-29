@@ -1,0 +1,93 @@
+{
+  "meta": {
+    "title": "Leonardo Alves Prates | Junior Full Stack Developer",
+    "description": "Portfolio of Leonardo Alves Prates, Junior Full Stack Developer: C#, .NET, React, TypeScript and SQL."
+  },
+  "a11y": {
+    "skipLink": "Skip to content",
+    "mainNav": "Main navigation",
+    "themeToggle": "Toggle light/dark theme",
+    "newTab": "(opens in a new tab)"
+  },
+  "nav": {
+    "about": "About",
+    "projects": "Projects",
+    "skills": "Skills",
+    "experience": "Experience",
+    "contact": "Contact"
+  },
+  "hero": {
+    "greeting": "Hi, I'm",
+    "role": "Junior Full Stack Developer",
+    "ctaProjects": "View projects",
+    "ctaResume": "Download résumé (PDF, Portuguese)",
+    "ctaContact": "Get in touch"
+  },
+  "about": {
+    "title": "About",
+    "paragraphs": [
+      "I hold an associate degree in Systems Analysis and Development from UNIP (2023).",
+      "Before programming, I worked in technical support and in customer service at Concentrix, where I diagnosed problems, talked to users and logged incidents.",
+      "Today I build web applications with React and TypeScript on the front end and REST APIs in C# / ASP.NET Core with SQL Server, with automated tests and CI.",
+      "I'm looking for a junior developer position in São Paulo or remote."
+    ]
+  },
+  "projects": {
+    "title": "Projects",
+    "card": {
+      "code": "Code",
+      "demo": "Demo",
+      "inProgress": "In progress",
+      "imagePlaceholder": "Project image not available yet",
+      "techList": "Technologies"
+    }
+  },
+  "skills": {
+    "title": "Skills",
+    "groups": {
+      "frontend": "Front end",
+      "backend": "Back end",
+      "database": "Databases",
+      "testing": "Testing & DevOps"
+    }
+  },
+  "experience": {
+    "title": "Experience & education",
+    "kinds": {
+      "work": "Experience",
+      "education": "Education"
+    }
+  },
+  "contact": {
+    "title": "Contact",
+    "intro": "Have an opening or want to talk about a project? Send me a message.",
+    "email": "Email",
+    "linkedin": "LinkedIn",
+    "github": "GitHub",
+    "form": {
+      "name": "Name",
+      "email": "Email",
+      "message": "Message",
+      "submit": "Send message",
+      "sending": "Sending…",
+      "success": "Message sent! I'll get back to you soon.",
+      "fixErrors": "Please fix the highlighted fields and try again.",
+      "errors": {
+        "name.min": "Enter your name (at least 2 characters).",
+        "name.max": "Name can be at most 100 characters.",
+        "email.invalid": "Enter a valid email, like name@example.com.",
+        "message.min": "Write a message with at least 10 characters.",
+        "message.max": "Message can be at most 2000 characters."
+      },
+      "server": {
+        "rate_limited": "Too many messages in a short time. Please try again in a few minutes.",
+        "not_configured": "Sending is unavailable right now. Please email lp.prates7@gmail.com directly.",
+        "generic": "Couldn't send right now. Please try again or email lp.prates7@gmail.com."
+      }
+    }
+  },
+  "footer": {
+    "rights": "Built with Next.js and TypeScript.",
+    "language": "Language"
+  }
+}

@@ -1,8 +1,8 @@
 import { skillGroups } from "@/data/skills";
-import type pt from "@/i18n/pt.json";
+import type { Dictionary } from "@/i18n/dictionaries";
 import { Section } from "./Section";
 
-type Props = { t: (typeof pt)["skills"] };
+type Props = { t: Dictionary["skills"] };
 
 export function Skills({ t }: Props) {
   return (

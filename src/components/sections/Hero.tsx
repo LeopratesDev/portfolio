@@ -1,7 +1,7 @@
 import { profile } from "@/data/profile";
-import type pt from "@/i18n/pt.json";
+import type { Dictionary } from "@/i18n/dictionaries";
 
-type Props = { t: (typeof pt)["hero"] };
+type Props = { t: Dictionary["hero"] };
 
 const buttonBase =
   "inline-flex min-h-11 items-center justify-center rounded-md px-5 py-2.5 font-medium transition-colors";
