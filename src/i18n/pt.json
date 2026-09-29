@@ -87,6 +87,7 @@
     }
   },
   "footer": {
-    "rights": "Feito com Next.js e TypeScript."
+    "rights": "Feito com Next.js e TypeScript.",
+    "language": "Idioma"
   }
 }
