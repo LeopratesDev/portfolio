@@ -1,5 +1,6 @@
 import Image from "next/image";
 import type { Project } from "@/data/projects";
+import type { Locale } from "@/i18n/config";
 
 export type ProjectCardLabels = {
   code: string;
@@ -12,11 +13,12 @@ export type ProjectCardLabels = {
 
 type Props = {
   project: Project;
+  locale: Locale;
   labels: ProjectCardLabels;
 };
 
 /** Server Component: nenhum JS vai para o navegador por causa deste card. */
-export function ProjectCard({ project, labels }: Props) {
+export function ProjectCard({ project, locale, labels }: Props) {
   const { title, description, image, tech, stats, links, status } = project;
 
   return (
@@ -24,7 +26,7 @@ export function ProjectCard({ project, labels }: Props) {
       {image ? (
         <Image
           src={image.src}
-          alt={image.alt}
+          alt={image.alt[locale]}
           // Mesma largura máxima que o card ocupa: evita baixar imagem maior que o necessário.
           sizes="(min-width: 1024px) 480px, (min-width: 768px) 50vw, 100vw"
           // Fica abaixo da primeira tela: carregamento lazy (padrão) + blur enquanto carrega.
@@ -50,13 +52,13 @@ export function ProjectCard({ project, labels }: Props) {
             </span>
           )}
         </div>
-        <p className="mt-2 text-muted">{description}</p>
+        <p className="mt-2 text-muted">{description[locale]}</p>
 
         {stats.length > 0 && (
           <dl className="mt-4 flex flex-wrap gap-x-6 gap-y-2">
             {stats.map((stat) => (
-              <div key={stat.label} className="flex flex-col-reverse">
-                <dt className="text-xs text-muted">{stat.label}</dt>
+              <div key={stat.label.pt} className="flex flex-col-reverse">
+                <dt className="text-xs text-muted">{stat.label[locale]}</dt>
                 <dd className="font-mono text-lg font-bold text-accent">{stat.value}</dd>
               </div>
             ))}

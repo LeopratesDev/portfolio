@@ -15,20 +15,20 @@ const labels: ProjectCardLabels = {
 const complete: Project = {
   slug: "exemplo",
   title: "Projeto Exemplo",
-  description: "Descrição curta.",
+  description: { pt: "Descrição curta.", en: "Short description." },
   status: "done",
   image: {
     src: { src: "/exemplo.png", width: 1280, height: 760, blurDataURL: "data:image/png;base64,AA" },
-    alt: "Tela principal do Projeto Exemplo",
+    alt: { pt: "Tela principal do Projeto Exemplo", en: "Main screen of Projeto Exemplo" },
   },
   tech: ["C#", "React"],
-  stats: [{ value: "21", label: "endpoints REST" }],
+  stats: [{ value: "21", label: { pt: "endpoints REST", en: "REST endpoints" } }],
   links: { github: "https://github.com/x/exemplo", demo: "https://exemplo.dev" },
 };
 
 describe("ProjectCard", () => {
   it("mostra título, imagem com alt, números e tecnologias", () => {
-    render(<ProjectCard project={complete} labels={labels} />);
+    render(<ProjectCard project={complete} locale="pt" labels={labels} />);
 
     expect(screen.getByRole("heading", { level: 3, name: "Projeto Exemplo" })).toBeInTheDocument();
     const img = screen.getByRole("img", { name: "Tela principal do Projeto Exemplo" });
@@ -44,7 +44,7 @@ describe("ProjectCard", () => {
   });
 
   it("links têm nome que inclui o projeto e avisam nova aba", () => {
-    render(<ProjectCard project={complete} labels={labels} />);
+    render(<ProjectCard project={complete} locale="pt" labels={labels} />);
 
     const code = screen.getByRole("link", { name: "Código Projeto Exemplo (abre em nova aba)" });
     expect(code).toHaveAttribute("href", "https://github.com/x/exemplo");
@@ -59,13 +59,13 @@ describe("ProjectCard", () => {
     const draft: Project = {
       slug: "rascunho",
       title: "Rascunho",
-      description: "Em breve.",
+      description: { pt: "Em breve.", en: "Soon." },
       status: "in-progress",
       tech: [],
       stats: [],
       links: {},
     };
-    render(<ProjectCard project={draft} labels={labels} />);
+    render(<ProjectCard project={draft} locale="pt" labels={labels} />);
 
     expect(screen.getByText("Em desenvolvimento")).toBeInTheDocument();
     expect(screen.getByRole("img", { name: "Imagem indisponível" })).toBeInTheDocument();
