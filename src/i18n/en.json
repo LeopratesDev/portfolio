@@ -7,7 +7,8 @@
     "skipLink": "Skip to content",
     "mainNav": "Main navigation",
     "themeToggle": "Toggle light/dark theme",
-    "newTab": "(opens in a new tab)"
+    "newTab": "(opens in a new tab)",
+    "social": "Social links"
   },
   "nav": {
     "about": "About",
@@ -21,7 +22,10 @@
     "role": "Junior Full Stack Developer",
     "ctaProjects": "View projects",
     "ctaResume": "Download résumé (PDF, Portuguese)",
-    "ctaContact": "Get in touch"
+    "ctaContact": "Get in touch",
+    "codeCaption": "Real excerpt from the RH Manager project: the endpoint that approves vacation requests",
+    "codeRepo": "View on GitHub: rh-manager",
+    "codeOmitted": "// … 1 line omitted"
   },
   "about": {
     "title": "About",

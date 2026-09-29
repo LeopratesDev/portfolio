@@ -22,7 +22,7 @@ export default async function Home({ params }: PageProps<"/[lang]">) {
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: serializeJsonLd(personJsonLd(lang, siteUrl())) }}
       />
-      <Hero t={t.hero} />
+      <Hero t={t.hero} newTabLabel={t.a11y.newTab} />
       <About t={t.about} />
       <Projects t={t.projects} locale={lang} newTabLabel={t.a11y.newTab} />
       <Skills t={t.skills} />
