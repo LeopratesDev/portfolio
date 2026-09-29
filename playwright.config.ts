@@ -11,6 +11,8 @@ export default defineConfig({
   use: {
     baseURL: `http://localhost:${PORT}`,
     trace: "on-first-retry",
+    // Sem rolagem suave nos testes: a posição final é determinística.
+    contextOptions: { reducedMotion: "reduce" },
   },
   projects: [
     { name: "mobile", use: { ...devices["Pixel 7"] } },
