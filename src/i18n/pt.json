@@ -1,0 +1,61 @@
+{
+  "meta": {
+    "title": "Leonardo Alves Prates | Desenvolvedor Full Stack Júnior",
+    "description": "Portfólio de Leonardo Alves Prates, desenvolvedor Full Stack Júnior: C#, .NET, React, TypeScript e SQL."
+  },
+  "a11y": {
+    "skipLink": "Pular para o conteúdo",
+    "mainNav": "Navegação principal",
+    "themeToggle": "Alternar tema claro/escuro",
+    "newTab": "(abre em nova aba)"
+  },
+  "nav": {
+    "about": "Sobre",
+    "projects": "Projetos",
+    "skills": "Habilidades",
+    "experience": "Experiência",
+    "contact": "Contato"
+  },
+  "hero": {
+    "greeting": "Olá, eu sou",
+    "role": "Desenvolvedor Full Stack Júnior",
+    "ctaProjects": "Ver projetos",
+    "ctaResume": "Baixar currículo (PDF)",
+    "ctaContact": "Falar comigo"
+  },
+  "about": {
+    "title": "Sobre",
+    "paragraphs": [
+      "Sou tecnólogo em Análise e Desenvolvimento de Sistemas pela UNIP (2023).",
+      "Antes de programar, trabalhei com suporte técnico e no atendimento ao cliente na Concentrix, onde diagnosticava problemas, conversava com usuários e registrava ocorrências.",
+      "Hoje desenvolvo aplicações web com React e TypeScript no front-end e APIs REST em C# / ASP.NET Core com SQL Server, com testes automatizados e CI.",
+      "Busco uma vaga de desenvolvedor júnior em São Paulo ou remota."
+    ]
+  },
+  "skills": {
+    "title": "Habilidades",
+    "groups": {
+      "frontend": "Front-end",
+      "backend": "Back-end",
+      "database": "Banco de dados",
+      "testing": "Testes e DevOps"
+    }
+  },
+  "experience": {
+    "title": "Experiência e formação",
+    "kinds": {
+      "work": "Experiência",
+      "education": "Formação"
+    }
+  },
+  "contact": {
+    "title": "Contato",
+    "intro": "Tem uma vaga ou quer conversar sobre um projeto? Me mande uma mensagem.",
+    "email": "E-mail",
+    "linkedin": "LinkedIn",
+    "github": "GitHub"
+  },
+  "footer": {
+    "rights": "Feito com Next.js e TypeScript."
+  }
+}
