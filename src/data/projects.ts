@@ -22,6 +22,39 @@ export type Project = {
 };
 
 export const projects: Project[] = [
+  // Fonte dos números: README do repositório service-orders-saas (02/10/2026):
+  // 29 testes unitários + 6 de integração (xUnit + Testcontainers) = 35.
+  // 10 endpoints REST listados no README (auth, serviceorders CRUD, stats, export, webhook, health).
+  {
+    slug: "service-orders-saas",
+    title: "Service Orders SaaS",
+    description: {
+      pt: "Plataforma multi-tenant de gestão de ordens de serviço com pagamentos Pix (Mercado Pago). API em C# / ASP.NET Core (Clean Architecture) e painel em Next.js.",
+      en: "Multi-tenant service-order management platform with Pix payments (Mercado Pago). API in C# / ASP.NET Core (Clean Architecture) and a Next.js dashboard.",
+    },
+    status: "done",
+    tech: [
+      "C#",
+      ".NET",
+      "ASP.NET Core",
+      "PostgreSQL",
+      "Clean Architecture",
+      "MediatR",
+      "Next.js",
+      "TypeScript",
+      "Tailwind CSS",
+      "Docker",
+    ],
+    stats: [
+      { value: "35", label: { pt: "testes automatizados", en: "automated tests" } },
+      { value: "10", label: { pt: "endpoints REST", en: "REST endpoints" } },
+      { value: "Pix", label: { pt: "pagamentos integrados", en: "integrated payments" } },
+    ],
+    links: {
+      github: "https://github.com/LeopratesDev/service-orders-saas",
+      demo: "https://service-orders-saas.vercel.app",
+    },
+  },
   // Fonte dos números: CI do repositório rh-manager (commit f4eed1c, 29/09/2026):
   // 35 testes unitários + 77 de integração (xUnit) + 60 no front (Vitest) = 172.
   {
