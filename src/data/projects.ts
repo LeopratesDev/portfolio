@@ -1,6 +1,7 @@
 import type { StaticImageData } from "next/image";
 import helpdeskApiTriage from "@/assets/projects/helpdesk-api-triage.png";
 import rhManagerDashboard from "@/assets/projects/rh-manager-dashboard.png";
+import serviceOrdersDashboard from "@/assets/projects/service-orders-dashboard.png";
 import type { Localized } from "@/i18n/config";
 
 /**
@@ -33,6 +34,13 @@ export const projects: Project[] = [
       en: "Multi-tenant service-order management platform with Pix payments (Mercado Pago). API in C# / ASP.NET Core (Clean Architecture) and a Next.js dashboard.",
     },
     status: "done",
+    image: {
+      src: serviceOrdersDashboard,
+      alt: {
+        pt: "Dashboard do Service Orders SaaS com tiles de resumo (total, recebido, pendente, rascunho), gráfico de ordens por status e lista de ordens com valores e ações.",
+        en: "Service Orders SaaS dashboard showing summary tiles (total, received, pending, draft), chart of orders by status and order list with amounts and actions.",
+      },
+    },
     tech: [
       "C#",
       ".NET",
