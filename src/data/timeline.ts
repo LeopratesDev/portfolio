@@ -30,7 +30,7 @@ export const timeline: TimelineEntry[] = [
       en: "Customer Service Agent (inbound)",
     },
     org: "Concentrix",
-    period: "2022 – 2023",
+    period: "10/2021 – 11/2022",
     description: {
       pt: "Identificação inicial de ocorrências, resolução de demandas de primeiro nível, registro dos atendimentos e encaminhamento de casos às áreas responsáveis.",
       en: "Initial triage of customer issues, first-level resolution, logging every interaction and routing cases to the responsible teams.",
@@ -38,9 +38,12 @@ export const timeline: TimelineEntry[] = [
   },
   {
     kind: "work",
-    title: { pt: "Suporte Técnico", en: "Technical Support" },
+    title: {
+      pt: "Suporte Técnico (Jovem Aprendiz)",
+      en: "Technical Support (Apprentice)",
+    },
     org: "Comércio e Importação Sertic",
-    period: "2017",
+    period: "09/2016 – 10/2017",
     description: {
       pt: "Instalação e configuração de softwares, atendimento aos usuários, diagnóstico de problemas técnicos e manutenção preventiva.",
       en: "Software installation and configuration, user support, troubleshooting technical problems and preventive maintenance.",

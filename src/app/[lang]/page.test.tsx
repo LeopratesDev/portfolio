@@ -56,7 +56,9 @@ describe("Home (en)", () => {
     }
     // Os três projetos (Service Orders SaaS, RH Manager e HelpDesk API) mostram "endpoints REST" traduzido
     expect(screen.getAllByText("REST endpoints")).toHaveLength(3);
-    expect(screen.getByRole("heading", { name: "Technical Support" })).toBeInTheDocument();
+    expect(
+      screen.getByRole("heading", { name: "Technical Support (Apprentice)" }),
+    ).toBeInTheDocument();
     expect(screen.getByRole("img", { name: /RH Manager dashboard/ })).toBeInTheDocument();
     expect(screen.getByRole("img", { name: /HelpDesk API Swagger/ })).toBeInTheDocument();
     expect(screen.getByRole("button", { name: "Send message" })).toBeInTheDocument();
