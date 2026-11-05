@@ -129,4 +129,35 @@ export const projects: Project[] = [
       github: "https://github.com/LeopratesDev/helpdesk-api",
     },
   },
+  // Fonte dos números: repositório assetflow (master, 05/11/2026): 17 endpoints na API,
+  // 76 testes pytest + 14 Vitest + 21 E2E (Playwright) = 111. CI (ruff, pytest, type-check, Vitest)
+  // roda em push/PR na master; o E2E ainda não está no CI.
+  {
+    slug: "assetflow",
+    title: "AssetFlow",
+    description: {
+      pt: "Gestão de ativos de TI com painel em React, gráficos e exportação para Excel, PDF e Word. API REST em Python / FastAPI com PostgreSQL e autenticação JWT.",
+      en: "IT asset management with a React dashboard, charts and export to Excel, PDF and Word. REST API in Python / FastAPI with PostgreSQL and JWT authentication.",
+    },
+    status: "done",
+    tech: [
+      "Python",
+      "FastAPI",
+      "SQLAlchemy",
+      "PostgreSQL",
+      "React",
+      "TypeScript",
+      "Playwright",
+      "Docker",
+    ],
+    stats: [
+      { value: "17", label: { pt: "endpoints REST", en: "REST endpoints" } },
+      { value: "111", label: { pt: "testes automatizados", en: "automated tests" } },
+      { value: "CI", label: { pt: "GitHub Actions", en: "GitHub Actions" } },
+    ],
+    links: {
+      github: "https://github.com/LeopratesDev/assetflow",
+      demo: "https://it-asset-manager-psi.vercel.app",
+    },
+  },
 ];
