@@ -61,6 +61,7 @@ describe("Home (en)", () => {
     ).toBeInTheDocument();
     expect(screen.getByRole("img", { name: /RH Manager dashboard/ })).toBeInTheDocument();
     expect(screen.getByRole("img", { name: /HelpDesk API Swagger/ })).toBeInTheDocument();
+    expect(screen.getByRole("img", { name: /AssetFlow dashboard/ })).toBeInTheDocument();
     expect(screen.getByRole("button", { name: "Send message" })).toBeInTheDocument();
     // Nenhum texto em português escapou para a versão em inglês.
     expect(screen.queryByText(/Ver projetos|Habilidades|Enviar mensagem/)).toBeNull();

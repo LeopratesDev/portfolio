@@ -1,4 +1,5 @@
 import type { StaticImageData } from "next/image";
+import assetflowDashboard from "@/assets/projects/assetflow-dashboard.png";
 import helpdeskApiTriage from "@/assets/projects/helpdesk-api-triage.png";
 import rhManagerDashboard from "@/assets/projects/rh-manager-dashboard.png";
 import serviceOrdersDashboard from "@/assets/projects/service-orders-dashboard.png";
@@ -140,6 +141,13 @@ export const projects: Project[] = [
       en: "IT asset management with a React dashboard, charts and export to Excel, PDF and Word. REST API in Python / FastAPI with PostgreSQL and JWT authentication.",
     },
     status: "done",
+    image: {
+      src: assetflowDashboard,
+      alt: {
+        pt: "Dashboard do AssetFlow com tabela de alocações ativas, valor total do patrimônio, gráfico de ativos por categoria e barras de ativos por status.",
+        en: "AssetFlow dashboard showing a table of active allocations, total asset value, a chart of assets by category and bars of assets by status.",
+      },
+    },
     tech: [
       "Python",
       "FastAPI",
