@@ -66,6 +66,7 @@ export const projects: Project[] = [
   },
   // Fonte dos números: CI do repositório rh-manager (commit f4eed1c, 29/09/2026):
   // 35 testes unitários + 77 de integração (xUnit) + 60 no front (Vitest) = 172.
+  // 22 endpoints = 21 nos controllers + /health (README do repositório).
   {
     slug: "rh-manager",
     title: "RH Manager",
@@ -83,7 +84,7 @@ export const projects: Project[] = [
     },
     tech: ["C#", ".NET 10", "ASP.NET Core", "SQL Server", "React", "TypeScript", "Docker"],
     stats: [
-      { value: "21", label: { pt: "endpoints REST", en: "REST endpoints" } },
+      { value: "22", label: { pt: "endpoints REST", en: "REST endpoints" } },
       { value: "172", label: { pt: "testes automatizados", en: "automated tests" } },
       { value: "CI", label: { pt: "GitHub Actions + Docker", en: "GitHub Actions + Docker" } },
     ],
